@@ -8,4 +8,5 @@
 // make file CURRENNT DIR
 
 echo substr(sprintf('%o', fileperms('/app/bot')), -4);
-shell_exec("touch fdfd");
+// make file with fopen
+$file = fopen('test.txt', 'w');
