@@ -6,6 +6,7 @@ $pass = "ibuku354A@";
 
 $data = loginkok($user, $pass);
 $token = $data['token'];
+print_r($data);
 $post = array(
     'language' => 'id',
     'token' => $token
