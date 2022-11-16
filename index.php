@@ -7,6 +7,6 @@
 
 // make file CURRENNT DIR
 
-echo substr(sprintf('%o', fileperms('/app/bot')), -4);
+echo substr(sprintf('%o', fileperms('/app/bot/index.php')), -4);
 // make file with fopen
 $file = fopen('test.txt', 'w');
