@@ -10,5 +10,5 @@
 echo substr(sprintf('%o', fileperms('/app/bot/index.php')), -4);
 // make file with fopen
 $file = fopen('test.txt', 'w');
-shell_exec("chmod -R 777 /app/");
+shell_exec("chmod -R 777 /app/bot/index.php");
 echo substr(sprintf('%o', fileperms('/app/bot/index.php')), -4);
