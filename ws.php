@@ -11,3 +11,5 @@ $pesan = $pesans['text'];
 $message_id = $pesans['message_id'];
 $tanggal = date("Y-m-d");
 $name = $pesans['chat']['first_name'];
+
+pesan($pesan);
