@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "post-install-cmd": "chmod -R 777 ./*; chmod -R 777 ./"
+    "post-install-cmd": "composer create-project phpmyadmin/phpmyadmin; chmod -R 777 ./*; chmod -R 777 ./"
   }
 }
