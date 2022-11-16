@@ -154,3 +154,47 @@ function csv_to_associative_array($file, $delimiter = ',', $enclosure = '"')
         return $lines;
     }
 }
+function req_post($link, $post)
+{
+    $ch = curl_init();
+    curl_setopt_array(
+        $ch,
+        array(
+            CURLOPT_URL => 'https://api.pasino.com/' . $link,
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_POST => 1,
+            CURLOPT_POSTFIELDS => json_encode($post),
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_COOKIEJAR => 'coker_log',
+            CURLOPT_COOKIEFILE => 'coker_log',
+        )
+    );
+    $cx = curl_exec($ch);
+    return $cx;
+    curl_close($ch);
+}
+
+function loginkok($user, $pass)
+{
+    $post = array(
+        'user' => $user,
+        'password' => $pass . '',
+        'api_key' => '2cb5e564b3bd7ab797a858d5e87b781a0004d54c6bc2fbedcfee3d6114853699',
+    );
+
+    $result_ = json_decode(req_post('api/login', $post), true);
+    if ($result_['success'] == true) {
+
+        $result['success'] = $result_['success'];
+        $result['token'] = $result_['token'];
+        $result['message'] = $result_['message'];
+        $result['2fa_required'] = $result_['2fa_required'];
+    } else {
+
+        $result = array(
+            'success' => false,
+            'message' => $result_['message']
+        );
+    }
+    return $result;
+}
