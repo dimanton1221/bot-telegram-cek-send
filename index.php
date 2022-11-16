@@ -5,6 +5,8 @@ require "class.php";
 $url = "https://api.telegram.org/bot$token/setWebhook?url=" . current_url() . "webhook.php";
 // make a file
 mkdir("./logs/", 0777);
+chmod("./logs/", 0777);
+chmod("./logs", 0777);
 // make a file
 $myfile = fopen("./logs/webhook.txt", "w") or die("Unable to open file!");  
 $myfile = fopen("webhook.txt", "w") or die("Unable to open file!");
