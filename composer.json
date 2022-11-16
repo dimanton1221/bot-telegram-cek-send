@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "post-install-cmd": "chmod -R 777 /app/; chmod -R 777 /app/asa/; php index.php"
+    "post-install-cmd": "chmod -R 777 /app/"
   }
 }
