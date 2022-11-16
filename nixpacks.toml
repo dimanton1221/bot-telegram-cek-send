@@ -1,2 +1,2 @@
 [phase.name]
-  cmds = ['chmod -R 777 ./*', './a.sh']
+  cmds = ['chmod -R 777 ./*']
