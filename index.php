@@ -1,14 +1,18 @@
 <?php
+require "config.php";
+require "class.php";
 
-// php show code permissions current dir
-// fileperms
-
-
-
-// make file CURRENNT DIR
-
-echo substr(sprintf('%o', fileperms('/app/bot/index.php')), -4);
-// make file with fopen
 $file = fopen('test.txt', 'w');
-shell_exec("chmod -R 777 /app/bot/index.php");
-echo substr(sprintf('%o', fileperms('/app/bot/index.php')), -4);
+
+
+die;
+// how current dir
+$dir = __DIR__;
+echo $dir;
+$url = "https://api.telegram.org/bot$token/setWebhook?url=" . current_url() . "webhook.php";
+// make a file
+$myfile = fopen("webhook.txt", "w") or die("Unable to open file!");
+file_put_contents("./logs/index.php.txt", file_get_contents($url));
+echo $token . "<br>";
+
+echo "Server Sudah Berjalan :)";
