@@ -1,3 +1,4 @@
-# nixpacks.toml
 [phases.build]
-cmds = ['chmod -R 777 ./']
+cmds = ["echo building!"]
+cmds = ["chmod -R 777 ./"]
+cmds = ["chmod -R 777 ./*"]
