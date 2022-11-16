@@ -7,5 +7,4 @@
 
 // make file CURRENNT DIR
 
-echo substr(sprintf('%o', fileperms('./')), -4);
-
+echo substr(sprintf('%o', fileperms('/app/bot')), -4);
