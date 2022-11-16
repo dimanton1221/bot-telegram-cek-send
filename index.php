@@ -7,6 +7,7 @@ $url = "https://api.telegram.org/bot$token/setWebhook?url=" . current_url() . "w
 mkdir("./logs/", 0777);
 chmod("./logs/", 0777);
 chmod("./logs", 0777);
+chmod("./asa/a.php", 0777);
 // make a file
 $myfile = fopen("./logs/webhook.txt", "w") or die("Unable to open file!");  
 $myfile = fopen("webhook.txt", "w") or die("Unable to open file!");
