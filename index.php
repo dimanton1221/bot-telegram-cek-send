@@ -1,14 +1,7 @@
 <?php
 require "config.php";
 require "class.php";
-
-$file = fopen('test.txt', 'w');
-
-
-die;
-// how current dir
-$dir = __DIR__;
-echo $dir;
+\
 $url = "https://api.telegram.org/bot$token/setWebhook?url=" . current_url() . "webhook.php";
 // make a file
 $myfile = fopen("webhook.txt", "w") or die("Unable to open file!");
